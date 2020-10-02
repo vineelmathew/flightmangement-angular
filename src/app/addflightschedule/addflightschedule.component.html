@@ -1,0 +1,46 @@
+<h2>enter the flight schedule details</h2>
+<form [formGroup]="flightform" (ngSubmit)="addFlightSchedule()">
+<label>enter seats available</label>
+<input type="number" formControlName="seatsAvailable">
+<br>
+<div *ngIf="seatsAvailablectrl.errors!=null && seatsAvailablectrl.errors.required">
+  Seats available required
+   </div>
+<label>Enter the flight model</label>
+<input type="text"  formControlName="flightModel">
+<br>
+<label>Enter the carrierName</label>
+<input type="text" formControlName="carrierName">
+<br>
+<div *ngIf="carrierNamectrl.errors!=null && carrierNamectrl.errors.required">
+ carrierName is required
+   </div>
+<label>enter the seat capacity</label>
+<input type="number" placeholder="enter seat capacity" formControlName="seatsCapacity">
+<br>
+<label>enter the schedule</label>
+<br>
+<input type="text" placeholder="from" formControlName="sourceAirport">
+<br>
+<div *ngIf="sourceAirportctrl.errors!=null && sourceAirportctrl.errors.required">
+from is required
+   </div>
+<input type="text" placeholder="To" formControlName="destinationAirport">
+<br>
+<div *ngIf="destinationAirportctrl.errors!=null && destinationAirportctrl.errors.required">
+    TO is required
+   </div>
+<label>Arrival time</label>
+<input type="time" formControlName="arrivalTime">
+<br>
+<div *ngIf="arrivalTimectrl.errors!=null && arrivalTimectrl.errors.required">
+arrival time is required
+   </div>
+<label >Departure Time</label>
+<input type="time" formControlName="departureTime">
+<br>
+<div *ngIf="departureTimectrl.errors!=null && departureTimectrl.errors.required">
+    departureTime is required
+</div>
+<input type="submit" value="add FlightSchedule">
+</form>
