@@ -20,6 +20,7 @@
 <br>
 <label>enter the schedule</label>
 <br>
+
 <input type="text" placeholder="from" formControlName="sourceAirport">
 <br>
 <div *ngIf="sourceAirportctrl.errors!=null && sourceAirportctrl.errors.required">
@@ -31,13 +32,13 @@ from is required
     TO is required
    </div>
 <label>Arrival time</label>
-<input type="time" formControlName="arrivalTime">
+<input type="date" formControlName="arrivalTime">
 <br>
 <div *ngIf="arrivalTimectrl.errors!=null && arrivalTimectrl.errors.required">
 arrival time is required
    </div>
 <label >Departure Time</label>
-<input type="time" formControlName="departureTime">
+<input type="date" formControlName="departureTime">
 <br>
 <div *ngIf="departureTimectrl.errors!=null && departureTimectrl.errors.required">
     departureTime is required

@@ -1,7 +1,6 @@
 export class Flight
 {
 
-    private flightNum:number;
     private flightModel:string;
     private carrierName:string;
     private seatCapacity:number;

@@ -57,6 +57,7 @@ export class AddflightscheduleComponent implements OnInit {
     let flightModel:string=this.flightModelctrl.value;
     let carrierName:string=this.carrierNamectrl.value;
     let seatsCapacity:number=this.seatsCapacityctrl.value;
+
     this.flights=new Flight(flightModel,carrierName,seatsCapacity);
     let sourceAirport:Airport=this.sourceAirportctrl.value;
     let destinationAirport:Airport=this.destinationAirportctrl.value;

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { FlightSchedule } from 'src/model/flightschedule';
-import { observable, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 @Injectable()
 export class FlightService
 {
@@ -13,7 +13,7 @@ constructor(private http:HttpClient)
 addFlightSchedule(flightschedule:FlightSchedule):Observable<FlightSchedule>
 {
     let addurl=this.url+"/add";
-    let observable:Observable<FlightSchedule>=this.http.post<FlightSchedule>(addurl,FlightSchedule);
+    let observable:Observable<FlightSchedule>=this.http.post<FlightSchedule>(addurl,flightschedule);
     return observable;
 }
 
